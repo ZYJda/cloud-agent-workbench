@@ -2,7 +2,7 @@
 
 验证日期：2026-11-17，Asia/Shanghai。初次演示使用考试 API 的真实模型 `linext-5.3-luna`；架构改造后的补充验证使用 `deepseek-v4-pro`。没有用假响应替代真实执行。
 
-## DeerFlow 参考改造与 DeepSeek 续聊：已通过
+## 架构分层与 DeepSeek 续聊：已通过
 
 - 架构改造提交 `cd9e2ff` 的 [Docker 构建、启动和重启持久化验证](https://github.com/ZYJda/cloud-agent-workbench/actions/runs/44037052817) 全部通过。
 - 本机离线回归增加至 17 项，全部通过；覆盖新增上下文中间件、每轮成果哈希、Gateway/Harness 依赖边界及每会话 DeepSeek 能力配置。

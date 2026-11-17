@@ -1,4 +1,4 @@
-"""Small real CLI check after the DeerFlow-inspired refactor (uses model credits)."""
+"""Small real CLI check for the layered runtime (uses model credits)."""
 import hashlib
 import json
 import time

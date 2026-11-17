@@ -1,15 +1,6 @@
-# 架构与 DeerFlow 2.0 参考
+# 工作台架构
 
-此版本参考 ByteDance 官方 DeerFlow **v2.0.0** 的分层和运行生命周期设计。实现是本项目自己的轻量版本，没有复制 DeerFlow 源码，也未声称完整实现 DeerFlow。保留真实 Codex CLI 是考试要求与已有接口兼容性的共同选择。
-
-## 阅读的源文件
-
-- [RunManager](https://github.com/bytedance/deer-flow/blob/v2.0.0/backend/packages/harness/deerflow/runtime/runs/manager.py)：运行注册、并发协调与持久化分工。
-- [RunStore](https://github.com/bytedance/deer-flow/blob/v2.0.0/backend/packages/harness/deerflow/runtime/runs/store/base.py)：持久化运行记录的独立边界。
-- [UploadsMiddleware](https://github.com/bytedance/deer-flow/blob/v2.0.0/backend/packages/harness/deerflow/agents/middlewares/uploads_middleware.py)：将已上传材料信息显式注入任务上下文。
-- [SandboxProvider](https://github.com/bytedance/deer-flow/blob/v2.0.0/backend/packages/harness/deerflow/sandbox/sandbox_provider.py)：隔离执行环境的生命周期接口。
-- [官方总体架构（main）](https://github.com/bytedance/deer-flow/blob/main/docs/ARCHITECTURE.md)：Gateway / Harness 单向依赖。main 会演进，上述具体实现参照固定 v2.0.0 标签。
-- [上游 MIT 许可证](https://github.com/bytedance/deer-flow/blob/v2.0.0/LICENSE)。这里只借鉴设计；如果以后复制上游代码，须随代码保留其版权和许可证文本。
+工作台以真实 Codex CLI 执行用户任务，通过独立的接口层、任务运行层、上下文管道和持久化存储，支持多会话、后台执行、上传材料与成果交付。单用户部署使用一个 Docker 容器与 SQLite，控制配置和运维成本。
 
 ## 本项目的实际调用链
 
@@ -39,7 +30,7 @@ flowchart TD
 
 `ContextPipeline` 依次准备工作目录、CLI home 和材料上下文。上传清单由服务器扫描生成，不信任客户端提供的绝对路径；文件名以 JSON 数据注入，并明确材料不具备系统指令权限。清单最多 100 项。上传使用隐藏临时文件写完再原子重命名，Agent 不会看到半个文件。
 
-`CodexDriver` 封装 CLI 参数、配置、凭据环境和 resume；`ExecutionProvider` 定义启动/终止契约，目前实现为 `LocalProcessProvider`。Docker 运行时它在现有应用容器中启动 CLI；这仍然是共享容器、按目录逻辑隔离，**不是 DeerFlow AIO 那样的逐会话沙箱**，也不会挂载宿主 Docker socket。
+`CodexDriver` 封装 CLI 参数、配置、凭据环境和 resume；`ExecutionProvider` 定义启动/终止契约，目前实现为 `LocalProcessProvider`。Docker 运行时它在现有应用容器中启动 CLI；所有会话共享容器，通过目录进行逻辑隔离，尚未实现逐会话安全沙箱，也不会挂载宿主 Docker socket。
 
 每轮成功后，扫描 artifacts/ 并保存路径、大小、SHA-256、run_id，发送 artifacts 事件。会话详情接口新增 artifacts 字段，可核对哪一轮交付了什么。这里只保存成果元数据快照；下载仍是当前文件，不提供旧版文件恢复。
 

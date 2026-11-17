@@ -56,7 +56,7 @@ python -m unittest discover -s tests -v
 
 ## 设计与取舍
 
-已参考 DeerFlow v2.0.0 官方源码进行分层改造，具体源码链接、采用范围及边界见 [架构说明](docs/ARCHITECTURE.md)。
+工作台采用分层架构，将浏览器接口、任务调度、执行环境和数据存储分开管理，具体职责与边界见 [架构说明](docs/ARCHITECTURE.md)。
 
 浏览器 → FastAPI Gateway → RunManager → ContextPipeline → CodexDriver / ExecutionProvider → Codex CLI → 模型 API。SQLiteStore 与 EventStream 分别负责持久化和 SSE 回放，harness/ 不依赖 HTTP 框架。
 
