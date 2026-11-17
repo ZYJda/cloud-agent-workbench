@@ -19,7 +19,17 @@ docker compose logs -f
 
 浏览器打开 http://localhost:8000 。停止服务：`docker compose down`。持久化数据在 `agent_data` 命名卷中，停止/重建容器不会丢失；不要使用 `down -v`，否则会删除历史和成果。
 
-API 必须兼容 OpenAI Responses 协议，并支持客户端 function/custom 工具。`AGENT_BASE_URL` 填写到 `/v1` 层级。考试环境模型通过 `/models` 查询得到 `linext-5.3-luna`。密钥只在服务端环境中使用；不要提交 `.env`、data/ 或原始凭据。
+API 必须兼容 OpenAI Responses 协议，并支持客户端 function/custom 工具。`AGENT_BASE_URL` 使用供应商文档指定的接口根地址，不包含 `/responses`；并非所有供应商都需要 `/v1`。密钥只在服务端环境中使用；不要提交 `.env`、data/ 或原始凭据。
+
+DeepSeek-V4-Pro 配置示例（[官方 Codex 接入说明](https://api-docs.deepseek.com/quick_start/agent_integrations/codex/)）：
+
+```dotenv
+AGENT_BASE_URL=https://api.deepseek.com
+AGENT_API_KEY=replace-with-your-key
+AGENT_MODEL=deepseek-v4-pro
+```
+
+修改配置后运行 `docker compose up -d --force-recreate` 使环境变量生效。本应用为每个会话生成独立的 CLI 配置，不修改用户的全局 Codex 配置。DeepSeek-V4-Pro 会自动加载官方文档所列的上下文窗口、工具格式及推理等级等能力配置，并使用本工作台自己的基础提示词。初次演示使用的考试模型为 `linext-5.3-luna`，旧凭据过期后的验证改用 DeepSeek。
 
 ## 使用
 

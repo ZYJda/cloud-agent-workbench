@@ -1,6 +1,15 @@
 # 实际验证记录
 
-验证日期：2026-11-17，Asia/Shanghai。演示使用考试 API 的真实模型 `linext-5.3-luna`；没有用假响应替代真实执行。
+验证日期：2026-11-17，Asia/Shanghai。初次演示使用考试 API 的真实模型 `linext-5.3-luna`；架构改造后的补充验证使用 `deepseek-v4-pro`。没有用假响应替代真实执行。
+
+## DeerFlow 参考改造与 DeepSeek 续聊：已通过
+
+- 架构改造提交 `cd9e2ff` 的 [Docker 构建、启动和重启持久化验证](https://github.com/ZYJda/cloud-agent-workbench/actions/runs/44037052817) 全部通过。
+- 本机离线回归增加至 17 项，全部通过；覆盖新增上下文中间件、每轮成果哈希、Gateway/Harness 依赖边界及每会话 DeepSeek 能力配置。
+- 原考试临时凭据过期返回 401 后，切换至 DeepSeek 官方 `https://api.deepseek.com`，模型 `deepseek-v4-pro`，继续使用 Codex CLI 0.169.0，无中转聊天模拟。
+- 在 Windows 本机实际运行 `python demo/check_harness.py`：上传包含 6、7 的文本，第一轮读取并计算得到 13，写入 artifacts/result.txt；第二轮沿用同一个 CLI thread ID，保留结果并追加 VERIFIED。两轮均 succeeded。
+- 已验证两轮成果清单的 SHA-256 不同，最终下载内容与第二轮登记的 SHA-256 一致。会话、任务状态与成果记录见 [harness-refactor.json](harness-refactor.json)，29 条原始执行事件见 [harness-refactor-events.json](harness-refactor-events.json)。
+- 此项 DeepSeek 真实模型验证运行于本机，不表述为容器内 DeepSeek 验证。下方既有容器四轮演示使用原考试模型；新的 Docker 验证不调用模型。新凭据仅保存在本机被忽略的 .env，未写入公开仓库。
 
 ## Windows 本机真实流程
 

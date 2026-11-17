@@ -2,6 +2,7 @@
 import hashlib
 import json
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 import httpx
 
@@ -35,5 +36,5 @@ assert len(manifests)==2
 assert manifests[0]['sha256']!=manifests[1]['sha256']
 assert manifests[-1]['sha256']==hashlib.sha256(r.content).hexdigest()
 out=Path(__file__).resolve().parents[1]/'evidence'/'harness-refactor.json'
-out.write_text(json.dumps({'verified':['real CLI','uploaded context','resume same thread','two per-run artifact hashes','download hash matches'],'session':second},ensure_ascii=False,indent=2),encoding='utf-8')
+out.write_text(json.dumps({'verified_at':datetime.now(timezone.utc).isoformat(),'health':call('GET','/health'),'verified':['real CLI','uploaded context','resume same thread','two per-run artifact hashes','download hash matches'],'downloaded_result':r.content.decode('utf-8'),'session':second},ensure_ascii=False,indent=2),encoding='utf-8')
 print('PASS: real CLI, upload context, resume, artifact manifests and download integrity',flush=True)

@@ -146,5 +146,21 @@ class WorkbenchTests(unittest.TestCase):
                 names=([node.module or ''] if isinstance(node,ast.ImportFrom) else [x.name for x in node.names] if isinstance(node,ast.Import) else [])
                 self.assertFalse(any(n.split('.')[0] in ('app','fastapi','starlette') for n in names),str(file))
 
+    def test_deepseek_catalog_is_scoped_and_does_not_contain_credentials(self):
+        import tomllib
+        from harness.context import RunContext
+        ctx=app.pipeline.prepare(RunContext(self.sid,'catalog-run','check'))
+        with patch.dict(os.environ,{'AGENT_MODEL':'deepseek-v4-pro','AGENT_BASE_URL':'https://api.deepseek.com'}):
+            spec=app.manager.driver.prepare(ctx)
+        config=tomllib.loads((ctx.cli_home/'config.toml').read_text(encoding='utf-8'))
+        catalog=Path(config['model_catalog_json'])
+        self.assertEqual(catalog.parent,ctx.cli_home.resolve())
+        model=json.loads(catalog.read_text(encoding='utf-8'))['models'][0]
+        self.assertEqual(model['slug'],'deepseek-v4-pro')
+        self.assertEqual(model['context_window'],1048576)
+        self.assertNotIn('unit-test-secret',catalog.read_text(encoding='utf-8'))
+        self.assertNotIn('unit-test-secret',(ctx.cli_home/'config.toml').read_text(encoding='utf-8'))
+        self.assertEqual(spec.env['AGENT_API_KEY'],'unit-test-secret')
+
 if __name__ == '__main__':
     unittest.main()

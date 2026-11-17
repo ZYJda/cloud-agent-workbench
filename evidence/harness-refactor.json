@@ -1,0 +1,75 @@
+{
+  "verified_at": "2026-11-17T07:24:37.514144+00:00",
+  "health": {
+    "ok": true,
+    "configured": true,
+    "cli": true,
+    "model": "deepseek-v4-pro"
+  },
+  "verified": [
+    "real CLI",
+    "uploaded context",
+    "resume same thread",
+    "two per-run artifact hashes",
+    "download hash matches"
+  ],
+  "downloaded_result": "13\nVERIFIED",
+  "session": {
+    "session": {
+      "id": "9650fdf5-9884-4eb0-b0b5-0f202dcdbf85",
+      "title": "架构改造 · 真实续聊验证",
+      "created": 1794900211.711548,
+      "thread_id": "01a1e863-b9b0-7861-a7c0-b4f8e97c1292"
+    },
+    "runs": [
+      {
+        "id": "1f908e72-2c59-4434-a6ff-3ca636c1e2fc",
+        "session_id": "9650fdf5-9884-4eb0-b0b5-0f202dcdbf85",
+        "prompt": "只做一个极小验证任务：读取上传的 numbers.txt，将两行整数之和写入 artifacts/result.txt，内容只需 13。用一条 shell 命令完成读取、计算、写入和打印结果即可。不要编写额外脚本、测试或说明文件。最后简短确认。",
+        "status": "succeeded",
+        "created": 1794900211.8467166,
+        "finished": 1794900239.4964597,
+        "error": null
+      },
+      {
+        "id": "de3dfc92-1ec9-4152-bef0-b6ceffd99e24",
+        "session_id": "9650fdf5-9884-4eb0-b0b5-0f202dcdbf85",
+        "prompt": "继续上轮工作：保留 artifacts/result.txt 中的数字，在文件末尾追加一行 VERIFIED。只修改这一个文件，读取确认即可，不要创建其他文件。",
+        "status": "succeeded",
+        "created": 1794900240.384016,
+        "finished": 1794900268.6906912,
+        "error": null
+      }
+    ],
+    "files": [
+      {
+        "path": "artifacts/result.txt",
+        "size": 11
+      },
+      {
+        "path": "uploads/fbaa3da6-numbers.txt",
+        "size": 4
+      }
+    ],
+    "artifacts": [
+      {
+        "session_id": "9650fdf5-9884-4eb0-b0b5-0f202dcdbf85",
+        "run_id": "1f908e72-2c59-4434-a6ff-3ca636c1e2fc",
+        "path": "artifacts/result.txt",
+        "size": 2,
+        "sha256": "3fdba35f04dc8c462986c992bcf875546257113072a909c162f7e470e581e278",
+        "created": 1794900239.4482172
+      },
+      {
+        "session_id": "9650fdf5-9884-4eb0-b0b5-0f202dcdbf85",
+        "run_id": "de3dfc92-1ec9-4152-bef0-b6ceffd99e24",
+        "path": "artifacts/result.txt",
+        "size": 11,
+        "sha256": "37dd5a09014a86e2ce9a9ad32128bb3c1d1c7daa524826e69cee7fc42d18952f",
+        "created": 1794900268.642133
+      }
+    ]
+  },
+  "runtime": "Windows native Codex CLI 0.169.0",
+  "architecture_commit": "cd9e2ff76f0e302522854b56d6fb05f156abb8fa"
+}
