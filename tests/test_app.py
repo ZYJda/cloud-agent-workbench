@@ -112,5 +112,39 @@ class WorkbenchTests(unittest.TestCase):
             app.execute(self.sid,rid)
         self.assertEqual(self.client.get(self.base).json()['runs'][0]['status'],'failed')
 
+    def test_context_pipeline_injects_uploaded_files(self):
+        from harness.context import RunContext
+        uploaded=self.client.post(self.base+'/upload',files={'file':('notes.txt',b'material')}).json()['path']
+        ctx=app.pipeline.prepare(RunContext(self.sid,'test-run','summarize'))
+        self.assertIn(uploaded,ctx.prompt)
+        self.assertTrue((ctx.workspace/'artifacts').is_dir())
+        spec=app.manager.driver.prepare(ctx,'resume-id')
+        self.assertEqual(spec.args[2:4],['resume','resume-id'])
+        self.assertNotIn('unit-test-secret',ctx.prompt)
+
+    def test_artifact_manifest_keeps_per_run_hashes(self):
+        import hashlib
+        target=app.workspace(self.sid)/'artifacts'/'result.txt'
+        target.parent.mkdir(exist_ok=True)
+        for text in ['first','second']:
+            target.write_text(text,encoding='utf-8')
+            rid=self.send().json()['id']
+            proc=MagicMock()
+            proc.stdout=io.BytesIO(b'{"type":"turn.completed"}\n')
+            proc.wait.return_value=proc.poll.return_value=0
+            with patch.object(app.manager.provider,'start',return_value=proc):
+                app.execute(self.sid,rid)
+        manifests=self.client.get(self.base).json()['artifacts']
+        self.assertEqual(len(manifests),2)
+        self.assertEqual([m['sha256'] for m in manifests],[hashlib.sha256(s.encode()).hexdigest() for s in ['first','second']])
+
+    def test_harness_has_no_gateway_or_http_dependency(self):
+        import ast
+        for file in (Path(__file__).resolve().parents[1]/'harness').glob('*.py'):
+            tree=ast.parse(file.read_text(encoding='utf-8'))
+            for node in ast.walk(tree):
+                names=([node.module or ''] if isinstance(node,ast.ImportFrom) else [x.name for x in node.names] if isinstance(node,ast.Import) else [])
+                self.assertFalse(any(n.split('.')[0] in ('app','fastapi','starlette') for n in names),str(file))
+
 if __name__ == '__main__':
     unittest.main()

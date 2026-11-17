@@ -46,9 +46,13 @@ python -m unittest discover -s tests -v
 
 ## 设计与取舍
 
-浏览器 → FastAPI → SQLite WAL / 后台线程池 → Codex CLI 子进程 → 模型 API。
+已参考 DeerFlow v2.0.0 官方源码进行分层改造，具体源码链接、采用范围及边界见 [架构说明](docs/ARCHITECTURE.md)。
+
+浏览器 → FastAPI Gateway → RunManager → ContextPipeline → CodexDriver / ExecutionProvider → Codex CLI → 模型 API。SQLiteStore 与 EventStream 分别负责持久化和 SSE 回放，harness/ 不依赖 HTTP 框架。
 
 SQLite 保存会话、任务状态和追加式事件；每会话独立 workspace 和 CODEX_HOME，后续交流用 CLI 自带的 resume。SSE 直接读取已落盘事件，重连无需依赖内存缓存。任务以排队、执行、完成、失败、取消、中断区分；取消和超时结束进程树，失败不会伪装成完成。配置缺失和 CLI 启动失败也会保留任务记录。
+
+上传材料由中间件显式注入上下文；文件写完后才原子发布。每轮成功后登记 artifacts/ 成果的路径、大小、SHA-256 和 run_id，保留元数据历史供核对；文件内容本身仍不做版本备份。
 
 没有实现另一个聊天模型或自制工具调用循环：文件操作、命令执行、推理和续聊均来自真实 Codex CLI。网页只负责调度、呈现和持久化。通过固定 CLI 版本、关闭 web_search 和子代理工具，缩小兼容面。参考 [Codex 非交互模式](https://developers.openai.com/codex/noninteractive) 和 [配置参考](https://developers.openai.com/codex/config-reference)。
 
