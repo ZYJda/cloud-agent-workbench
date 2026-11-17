@@ -2,6 +2,10 @@
 
 把真实 Codex CLI 放进浏览器：多会话、后台执行、进度记录、上传材料、文件预览/下载、继续交流。面向可信单用户的本机 Docker 部署。
 
+![真实双会话演示](evidence/screenshots/report-complete.jpg)
+
+[实际验证记录与成果](evidence/README.md) · [自动验证](https://github.com/ZYJda/cloud-agent-workbench/actions) · [演示脚本](demo/DEMO.md)
+
 ## 快速开始
 
 需要 Docker Engine / Docker Desktop（Linux containers）和 Docker Compose v2。
@@ -38,7 +42,7 @@ uvicorn app:app --host 127.0.0.1 --port 8000
 python -m unittest discover -s tests -v
 ```
 
-可选环境变量：`CODEX_BIN`（CLI 可执行文件路径）、`DATA_DIR`、`RUN_TIMEOUT_SECONDS`（默认 900）。仅启动一个 uvicorn worker；任务注册表与线程池是单进程设计。
+可选环境变量：`CODEX_BIN`（CLI 可执行文件路径）、`DATA_DIR`、`RUN_TIMEOUT_SECONDS`（默认 900）、`MAX_CONCURRENT_RUNS`（默认 2，可设 1–4；考试 API 限流时建议 1）。仅启动一个 uvicorn worker；任务注册表与线程池是单进程设计。
 
 ## 设计与取舍
 
@@ -47,6 +51,8 @@ python -m unittest discover -s tests -v
 SQLite 保存会话、任务状态和追加式事件；每会话独立 workspace 和 CODEX_HOME，后续交流用 CLI 自带的 resume。SSE 直接读取已落盘事件，重连无需依赖内存缓存。任务以排队、执行、完成、失败、取消、中断区分；取消和超时结束进程树，失败不会伪装成完成。配置缺失和 CLI 启动失败也会保留任务记录。
 
 没有实现另一个聊天模型或自制工具调用循环：文件操作、命令执行、推理和续聊均来自真实 Codex CLI。网页只负责调度、呈现和持久化。通过固定 CLI 版本、关闭 web_search 和子代理工具，缩小兼容面。参考 [Codex 非交互模式](https://developers.openai.com/codex/noninteractive) 和 [配置参考](https://developers.openai.com/codex/config-reference)。
+
+实际联调发现两项协议差异：考试接口拒绝 namespace 类型的子代理工具声明，因此设置 `[agents].enabled=false`；显式 `reasoning.effort=medium` 会被该模型拒绝，因此使用服务默认推理设置。没有篡改模型结果，也没有用普通聊天响应冒充 CLI 执行。
 
 ## 安全边界与已知限制
 

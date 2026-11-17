@@ -1,0 +1,18 @@
+test_blank_prompt_rejected (test_app.WorkbenchTests.test_blank_prompt_rejected) ... ok
+test_cli_exit_zero_without_completed_event_is_failure (test_app.WorkbenchTests.test_cli_exit_zero_without_completed_event_is_failure) ... ok
+test_cli_failure_is_terminal_and_secret_redacted (test_app.WorkbenchTests.test_cli_failure_is_terminal_and_secret_redacted) ... ok
+test_cross_origin_mutation_rejected (test_app.WorkbenchTests.test_cross_origin_mutation_rejected) ... ok
+test_duplicate_run_conflicts (test_app.WorkbenchTests.test_duplicate_run_conflicts) ... ok
+test_host_rebinding_blocked (test_app.WorkbenchTests.test_host_rebinding_blocked) ... ok
+test_html_preview_is_json_and_download_is_attachment (test_app.WorkbenchTests.test_html_preview_is_json_and_download_is_attachment) ... ok
+test_path_traversal_and_hidden_files_blocked (test_app.WorkbenchTests.test_path_traversal_and_hidden_files_blocked) ... ok
+test_restart_preserves_history_and_marks_interrupted (test_app.WorkbenchTests.test_restart_preserves_history_and_marks_interrupted) ... ok
+test_sessions_are_isolated (test_app.WorkbenchTests.test_sessions_are_isolated) ... ok
+test_stop_queued_and_continue (test_app.WorkbenchTests.test_stop_queued_and_continue) ... ok
+test_upload_duplicates_preserved (test_app.WorkbenchTests.test_upload_duplicates_preserved) ... ok
+test_worker_events_and_resume_id (test_app.WorkbenchTests.test_worker_events_and_resume_id) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.378s
+
+OK
