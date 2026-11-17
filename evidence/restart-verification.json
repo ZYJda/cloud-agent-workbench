@@ -1,0 +1,19 @@
+{
+  "health": {
+    "ok": true,
+    "configured": true,
+    "cli": true,
+    "model": "linext-5.3-luna"
+  },
+  "sessions": {
+    "code": {
+      "runs": 2,
+      "status": "succeeded"
+    },
+    "report": {
+      "runs": 2,
+      "status": "succeeded"
+    }
+  },
+  "restart_persistence": "verified after restarting uvicorn"
+}

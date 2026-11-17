@@ -42,6 +42,8 @@ if __name__=='__main__':
         d=wait(sid)
         assert len(d['runs'])==2
         assert d['session']['thread_id']
+        required='artifacts/summary.py' if label=='code' else 'artifacts/report.md'
+        assert required in [f['path'] for f in d['files']],f'Missing deliverable: {required}'
         r=c.get('/api/sessions/'+sid+'/archive'); r.raise_for_status()
         (OUT/(label+'.zip')).write_bytes(r.content)
         print(label,'follow-up passed',len(d['files']),'files',flush=True)
