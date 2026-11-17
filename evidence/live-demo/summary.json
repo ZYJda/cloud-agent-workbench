@@ -1,0 +1,17 @@
+{
+  "code": "c097c285-1f0d-4db0-8bed-1d70a8f696d5",
+  "report": "982f3dfd-eaad-4d0a-87f3-789431d9fe9e",
+  "health": {
+    "ok": true,
+    "configured": true,
+    "cli": true,
+    "model": "linext-5.3-luna"
+  },
+  "verified": [
+    "two concurrent sessions",
+    "uploads",
+    "two turns per session",
+    "CLI resume IDs",
+    "ZIP downloads"
+  ]
+}
