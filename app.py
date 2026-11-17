@@ -124,7 +124,7 @@ def execute(sid, rid):
         config = '\n'.join([
             'model_provider = "exam"',
             'model = '+json.dumps(os.environ['AGENT_MODEL']),
-            'model_reasoning_effort = "medium"', 'web_search = "disabled"',
+            'web_search = "disabled"',
             '[model_providers.exam]', 'name = "Exam API"',
             'base_url = '+json.dumps(os.getenv('AGENT_BASE_URL','https://api.openai.com/v1')),
             'env_key = "AGENT_API_KEY"', 'wire_api = "responses"',
