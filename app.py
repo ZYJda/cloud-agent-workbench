@@ -18,6 +18,7 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Request, UploadFile
 from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
+from starlette.middleware.trustedhost import TrustedHostMiddleware
 from pydantic import BaseModel, Field
 
 ROOT = Path(__file__).parent.resolve()
@@ -25,7 +26,7 @@ load_dotenv(ROOT / '.env')
 DATA = Path(os.getenv('DATA_DIR', ROOT / 'data')).resolve()
 DATA.mkdir(parents=True, exist_ok=True)
 DB = DATA / 'workbench.sqlite3'
-pool = concurrent.futures.ThreadPoolExecutor(max_workers=2)
+pool = concurrent.futures.ThreadPoolExecutor(max_workers=max(1,min(4,int(os.getenv('MAX_CONCURRENT_RUNS','2')))))
 lock = threading.RLock()
 processes = {}
 TERMINAL = ('succeeded', 'failed', 'cancelled', 'interrupted')
@@ -157,6 +158,7 @@ def execute(sid, rid):
         proc.stdin.write(prompt.encode('utf-8'))
         proc.stdin.close()
         failed = False
+        last_error = ''
         for raw in iter(proc.stdout.readline, b''):
             line = raw.decode('utf-8', errors='replace').strip()
             if not line:
@@ -170,12 +172,16 @@ def execute(sid, rid):
                 query('UPDATE sessions SET thread_id=? WHERE id=?', (item['thread_id'],sid))
             if item.get('type') == 'turn.failed':
                 failed = True
+                last_error = str(item.get('error',{}).get('message',''))
+            elif item.get('type') == 'error':
+                last_error = str(item.get('message',''))
             event(sid,rid,'agent',item)
         rc = proc.wait()
         if timed_out.is_set():
             raise RuntimeError('任务超时已停止；已有成果已保留，可缩小任务后继续。')
         if rc != 0 or failed:
-            raise RuntimeError(f'Agent 执行失败（退出码 {rc}）。请查看执行记录，检查模型、额度或网络后重试。')
+            explanation = '请求过于频繁，请等待其他任务完成后重试。' if '429' in last_error else '请查看执行记录，检查模型、额度或网络后重试。'
+            raise RuntimeError(f'Agent 执行失败（退出码 {rc}）。{explanation} {last_error[:1000]}')
         with lock:
             query("UPDATE runs SET status='succeeded',finished=? WHERE id=? AND status='running'", (time.time(),rid))
     except Exception as exc:
@@ -199,6 +205,7 @@ async def lifespan(app):
     pool.shutdown(wait=False, cancel_futures=True)
 
 app = FastAPI(title='云端 Agent 工作台', lifespan=lifespan)
+app.add_middleware(TrustedHostMiddleware, allowed_hosts=['localhost','127.0.0.1','[::1]','testserver'])
 
 @app.middleware('http')
 async def guard(request, call_next):

@@ -17,7 +17,7 @@ jobs:
           AGENT_BASE_URL: ${{ secrets.AGENT_BASE_URL }}
           AGENT_MODEL: ${{ secrets.AGENT_MODEL }}
         run: |
-          docker run -d --name workbench -p 127.0.0.1:8000:8000 -e AGENT_API_KEY -e AGENT_BASE_URL -e AGENT_MODEL cloud-agent-workbench
+          docker run -d --name workbench -p 127.0.0.1:8000:8000 -e AGENT_API_KEY -e AGENT_BASE_URL -e AGENT_MODEL -e MAX_CONCURRENT_RUNS=1 cloud-agent-workbench
           for i in $(seq 1 30); do curl -fsS http://127.0.0.1:8000/api/health && break || sleep 2; done
           docker exec workbench codex --version
       - name: Two concurrent tasks and follow-up turns
