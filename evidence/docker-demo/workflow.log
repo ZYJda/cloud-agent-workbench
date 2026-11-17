@@ -1,0 +1,655 @@
+live-demo	Set up job	﻿2026-11-17T06:44:07.4903643Z Current runner version: '2.338.2'
+live-demo	Set up job	2026-11-17T06:44:07.4926070Z ##[group]Runner Image Provisioner
+live-demo	Set up job	2026-11-17T06:44:07.4926846Z Hosted Compute Agent
+live-demo	Set up job	2026-11-17T06:44:07.4927529Z Version: 20261103.629
+live-demo	Set up job	2026-11-17T06:44:07.4928096Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+live-demo	Set up job	2026-11-17T06:44:07.4928744Z Build Date: 2026-11-03T17:26:59Z
+live-demo	Set up job	2026-11-17T06:44:07.4929422Z Worker ID: {c6c3f8d4-79dc-4efb-9870-ec260646e7bc}
+live-demo	Set up job	2026-11-17T06:44:07.4930052Z Region: eastus2
+live-demo	Set up job	2026-11-17T06:44:07.4930605Z Cloud: Azure
+live-demo	Set up job	2026-11-17T06:44:07.4931075Z ##[endgroup]
+live-demo	Set up job	2026-11-17T06:44:07.4932468Z ##[group]Operating System
+live-demo	Set up job	2026-11-17T06:44:07.4933206Z Ubuntu
+live-demo	Set up job	2026-11-17T06:44:07.4933667Z 26.04.1
+live-demo	Set up job	2026-11-17T06:44:07.4934161Z LTS
+live-demo	Set up job	2026-11-17T06:44:07.4934617Z ##[endgroup]
+live-demo	Set up job	2026-11-17T06:44:07.4935162Z ##[group]Runner Image
+live-demo	Set up job	2026-11-17T06:44:07.4935716Z Image: ubuntu-26.04
+live-demo	Set up job	2026-11-17T06:44:07.4936214Z Version: 20261111.196.1
+live-demo	Set up job	2026-11-17T06:44:07.4937177Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+live-demo	Set up job	2026-11-17T06:44:07.4938715Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+live-demo	Set up job	2026-11-17T06:44:07.4939529Z ##[endgroup]
+live-demo	Set up job	2026-11-17T06:44:07.4940929Z ##[group]GITHUB_TOKEN Permissions
+live-demo	Set up job	2026-11-17T06:44:07.4943015Z Contents: read
+live-demo	Set up job	2026-11-17T06:44:07.4943678Z Metadata: read
+live-demo	Set up job	2026-11-17T06:44:07.4944206Z Packages: read
+live-demo	Set up job	2026-11-17T06:44:07.4944710Z ##[endgroup]
+live-demo	Set up job	2026-11-17T06:44:07.4947073Z Secret source: Actions
+live-demo	Set up job	2026-11-17T06:44:07.4947996Z Cache mode: write
+live-demo	Set up job	2026-11-17T06:44:07.4948770Z Prepare workflow directory
+live-demo	Set up job	2026-11-17T06:44:07.5207299Z Prepare all required actions
+live-demo	Set up job	2026-11-17T06:44:07.5245391Z Getting action download info
+live-demo	Set up job	2026-11-17T06:44:07.7058834Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+live-demo	Set up job	2026-11-17T06:44:07.8250531Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+live-demo	Set up job	2026-11-17T06:44:07.9089621Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+live-demo	Set up job	2026-11-17T06:44:08.0643066Z Complete job name: live-demo
+live-demo	Run actions/checkout@v4	﻿2026-11-17T06:44:08.1338138Z ##[group]Run actions/checkout@v4
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1338864Z with:
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1339264Z   repository: ZYJda/cloud-agent-workbench
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1342527Z   token: ***
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1342902Z   ssh-strict: true
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1343279Z   ssh-user: git
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1343663Z   persist-credentials: true
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1344079Z   clean: true
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1344454Z   sparse-checkout-cone-mode: true
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1344885Z   fetch-depth: 1
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1345257Z   fetch-tags: false
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1345633Z   show-progress: true
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1346015Z   lfs: false
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1346370Z   submodules: false
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1346750Z   set-safe-directory: true
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1347169Z   allow-unsafe-pr-checkout: false
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.1347805Z ##[endgroup]
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.3757924Z Syncing repository: ZYJda/cloud-agent-workbench
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.3760800Z ##[group]Getting Git version info
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.3761844Z Working directory is '/home/runner/work/cloud-agent-workbench/cloud-agent-workbench'
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.3763388Z [command]/usr/bin/git version
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.3763879Z git version 2.56.1
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.3772821Z ##[endgroup]
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.3780138Z Temporarily overriding HOME='/home/runner/work/_temp/66d9baf3-2a1f-4179-9bfb-b0a080158697' before making global git config changes
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.3782337Z Adding repository directory to the temporary git global config as a safe directory
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.3784696Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cloud-agent-workbench/cloud-agent-workbench
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.3944271Z Deleting the contents of '/home/runner/work/cloud-agent-workbench/cloud-agent-workbench'
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.3951038Z ##[group]Initializing the repository
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.3953144Z [command]/usr/bin/git init /home/runner/work/cloud-agent-workbench/cloud-agent-workbench
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4057254Z hint: Using 'master' as the name for the initial branch. This default branch name
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4059044Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4060135Z hint: to use in all of your new repositories, which will suppress this warning,
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4061184Z hint: call:
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4062176Z hint:
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4063029Z hint: 	git config --global init.defaultBranch <name>
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4063927Z hint:
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4064762Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4066109Z hint: 'development'. The just-created branch can be renamed via this command:
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4067193Z hint:
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4067799Z hint: 	git branch -m <name>
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4068500Z hint:
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4069389Z hint: Disable this message with "git config set advice.defaultBranchName false"
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4071074Z Initialized empty Git repository in /home/runner/work/cloud-agent-workbench/cloud-agent-workbench/.git/
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4079607Z [command]/usr/bin/git remote add origin https://github.com/ZYJda/cloud-agent-workbench
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4128565Z ##[endgroup]
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4129913Z ##[group]Disabling automatic garbage collection
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4131091Z [command]/usr/bin/git config --local gc.auto 0
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4160463Z ##[endgroup]
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4161934Z ##[group]Setting up auth
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4165676Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4197804Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4662623Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4700533Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4931242Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.4963566Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.5209885Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.5246714Z ##[endgroup]
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.5247989Z ##[group]Fetching the repository
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.5254969Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d99b8b7abdd1e944d90e1ec6a473f66fe7d74059:refs/remotes/origin/main
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.7349366Z From https://github.com/ZYJda/cloud-agent-workbench
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.7350454Z  * [new ref]         d99b8b7abdd1e944d90e1ec6a473f66fe7d74059 -> origin/main
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.7353881Z ##[endgroup]
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.7354802Z ##[group]Determining the checkout info
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.7356048Z ##[endgroup]
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.7360701Z [command]/usr/bin/git sparse-checkout disable
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.7406657Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.7432239Z ##[group]Checking out the ref
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.7435428Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.7529852Z Switched to a new branch 'main'
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.7535134Z branch 'main' set up to track 'origin/main'.
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.7539817Z ##[endgroup]
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.7576327Z [command]/usr/bin/git log -1 --format=%H
+live-demo	Run actions/checkout@v4	2026-11-17T06:44:08.7597544Z d99b8b7abdd1e944d90e1ec6a473f66fe7d74059
+live-demo	Run actions/setup-python@v5	﻿2026-11-17T06:44:08.7918778Z ##[group]Run actions/setup-python@v5
+live-demo	Run actions/setup-python@v5	2026-11-17T06:44:08.7919322Z with:
+live-demo	Run actions/setup-python@v5	2026-11-17T06:44:08.7919884Z   python-version: 3.11
+live-demo	Run actions/setup-python@v5	2026-11-17T06:44:08.7920322Z   check-latest: false
+live-demo	Run actions/setup-python@v5	2026-11-17T06:44:08.7923809Z   token: ***
+live-demo	Run actions/setup-python@v5	2026-11-17T06:44:08.7924229Z   update-environment: true
+live-demo	Run actions/setup-python@v5	2026-11-17T06:44:08.7924692Z   allow-prereleases: false
+live-demo	Run actions/setup-python@v5	2026-11-17T06:44:08.7925144Z   freethreaded: false
+live-demo	Run actions/setup-python@v5	2026-11-17T06:44:08.7925554Z ##[endgroup]
+live-demo	Run actions/setup-python@v5	2026-11-17T06:44:08.8985970Z ##[group]Installed versions
+live-demo	Run actions/setup-python@v5	2026-11-17T06:44:08.9128410Z (node:2193) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+live-demo	Run actions/setup-python@v5	2026-11-17T06:44:08.9130085Z (Use `node --trace-deprecation ...` to show where the warning was created)
+live-demo	Run actions/setup-python@v5	2026-11-17T06:44:08.9130965Z Successfully set up CPython (3.11.18)
+live-demo	Run actions/setup-python@v5	2026-11-17T06:44:08.9132159Z ##[endgroup]
+live-demo	Run pip install -r requirements.txt	﻿2026-11-17T06:44:08.9246941Z ##[group]Run pip install -r requirements.txt
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:08.9247666Z ^[[36;1mpip install -r requirements.txt^[[0m
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:08.9304628Z shell: /usr/bin/bash -e {0}
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:08.9305157Z env:
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:08.9305659Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:08.9306435Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:08.9307183Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:08.9307835Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:08.9308489Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:08.9309169Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:08.9309737Z ##[endgroup]
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:09.7199438Z Collecting fastapi==0.115.12 (from -r requirements.txt (line 1))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:09.8524770Z   Downloading fastapi-0.115.12-py3-none-any.whl.metadata (27 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:09.8888287Z Collecting uvicorn==0.34.2 (from -r requirements.txt (line 2))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:09.9257201Z   Downloading uvicorn-0.34.2-py3-none-any.whl.metadata (6.5 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:09.9470374Z Collecting python-multipart==0.0.20 (from -r requirements.txt (line 3))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:09.9842552Z   Downloading python_multipart-0.0.20-py3-none-any.whl.metadata (1.8 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.0074777Z Collecting httpx==0.28.1 (from -r requirements.txt (line 4))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.0445680Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.0679062Z Collecting python-dotenv==1.1.0 (from -r requirements.txt (line 5))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.1059913Z   Downloading python_dotenv-1.1.0-py3-none-any.whl.metadata (24 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.1409119Z Collecting starlette<0.47.0,>=0.40.0 (from fastapi==0.115.12->-r requirements.txt (line 1))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.1779615Z   Downloading starlette-0.46.2-py3-none-any.whl.metadata (6.2 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.2819527Z Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi==0.115.12->-r requirements.txt (line 1))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.3192466Z   Downloading pydantic-2.14.3-py3-none-any.whl.metadata (141 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.4052900Z Collecting typing-extensions>=4.8.0 (from fastapi==0.115.12->-r requirements.txt (line 1))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.4421054Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.4646960Z Collecting click>=7.0 (from uvicorn==0.34.2->-r requirements.txt (line 2))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.5019836Z   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.5211028Z Collecting h11>=0.8 (from uvicorn==0.34.2->-r requirements.txt (line 2))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.5577331Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.5826434Z Collecting anyio (from httpx==0.28.1->-r requirements.txt (line 4))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.6196173Z   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.6442712Z Collecting certifi (from httpx==0.28.1->-r requirements.txt (line 4))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.6815506Z   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.7035703Z Collecting httpcore==1.* (from httpx==0.28.1->-r requirements.txt (line 4))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.7406407Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.7658385Z Collecting idna (from httpx==0.28.1->-r requirements.txt (line 4))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.8025881Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.8229542Z Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.12->-r requirements.txt (line 1))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:10.8600921Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:11.3446984Z Collecting pydantic-core==2.50.4 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.12->-r requirements.txt (line 1))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:11.3818515Z   Downloading pydantic_core-2.50.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:11.4009733Z Collecting typing-inspection>=0.4.4 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.12->-r requirements.txt (line 1))
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:11.4378687Z   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:11.4824626Z Downloading fastapi-0.115.12-py3-none-any.whl (95 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:11.5283893Z Downloading uvicorn-0.34.2-py3-none-any.whl (62 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:11.5713919Z Downloading python_multipart-0.0.20-py3-none-any.whl (24 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:11.6110528Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:11.6551296Z Downloading python_dotenv-1.1.0-py3-none-any.whl (20 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:11.6954519Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:11.7391108Z Downloading pydantic-2.14.3-py3-none-any.whl (494 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:11.8296905Z Downloading pydantic_core-2.50.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:11.9145177Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 25.7 MB/s  0:00:00
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:11.9514157Z Downloading starlette-0.46.2-py3-none-any.whl (72 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:11.9907890Z Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:12.0296061Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:12.0683596Z Downloading click-8.5.1-py3-none-any.whl (126 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:12.1959456Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:12.2411859Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:12.2797788Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:12.3179466Z Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:12.3565663Z Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:12.4480089Z Installing collected packages: typing-extensions, python-multipart, python-dotenv, idna, h11, click, certifi, annotated-types, uvicorn, typing-inspection, pydantic-core, httpcore, anyio, starlette, pydantic, httpx, fastapi
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:13.1399481Z 
+live-demo	Run pip install -r requirements.txt	2026-11-17T06:44:13.1410301Z Successfully installed annotated-types-0.8.0 anyio-4.16.0 certifi-2026.10.23 click-8.5.1 fastapi-0.115.12 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 pydantic-2.14.3 pydantic-core-2.50.4 python-dotenv-1.1.0 python-multipart-0.0.20 starlette-0.46.2 typing-extensions-4.16.0 typing-inspection-0.4.5 uvicorn-0.34.2
+live-demo	Run docker build -t cloud-agent-workbench .	﻿2026-11-17T06:44:13.2193901Z ##[group]Run docker build -t cloud-agent-workbench .
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.2194262Z ^[[36;1mdocker build -t cloud-agent-workbench .^[[0m
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.2242344Z shell: /usr/bin/bash -e {0}
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.2242566Z env:
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.2242804Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.2243188Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.2243531Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.2243841Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.2244150Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.2244634Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.2244896Z ##[endgroup]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.8631225Z #0 building with "default" instance using docker driver
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.8631505Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.8631783Z #1 [internal] load build definition from Dockerfile
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.8632136Z #1 transferring dockerfile: 1.00kB done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.8632574Z #1 DONE 0.0s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.8632678Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.8632825Z #2 [auth] library/python:pull token for registry-1.docker.io
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.8633170Z #2 DONE 0.0s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.8633305Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.8633469Z #3 [auth] library/node:pull token for registry-1.docker.io
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.8633862Z #3 DONE 0.0s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.8633996Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:13.8634250Z #4 [internal] load metadata for docker.io/library/python:3.11-slim-bookworm
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.0305553Z #4 DONE 0.4s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.0305809Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.0306100Z #5 [internal] load metadata for docker.io/library/node:22-bookworm-slim
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1390421Z #5 DONE 0.4s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1390632Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1390743Z #6 [internal] load .dockerignore
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1391091Z #6 transferring context: 88B done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1391396Z #6 DONE 0.0s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1391500Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1391716Z #7 [internal] load build context
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1392000Z #7 transferring context: 33.91kB done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1392219Z #7 DONE 0.0s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1392314Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1392797Z #8 [stage-1  1/10] FROM docker.io/library/python:3.11-slim-bookworm@sha256:a83ba18aef0f865b1a4a611c2cf460fe446f2795673bbb9fe43be570439e3b39
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1393985Z #8 resolve docker.io/library/python:3.11-slim-bookworm@sha256:a83ba18aef0f865b1a4a611c2cf460fe446f2795673bbb9fe43be570439e3b39 0.0s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1394770Z #8 DONE 0.0s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1394925Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1395429Z #9 [cli 1/2] FROM docker.io/library/node:22-bookworm-slim@sha256:e9f565d32859f0cbfb52125eafe8be39390f24dac302dc3cdf566e8ba3ab21ee
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.1396351Z #9 resolve docker.io/library/node:22-bookworm-slim@sha256:e9f565d32859f0cbfb52125eafe8be39390f24dac302dc3cdf566e8ba3ab21ee 0.0s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.2496393Z #9 sha256:aa4e8910862263c3bad50c754fb555bbbb7661c41e35ba703ae082ec6749c175 1.71MB / 1.71MB 0.1s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.3568008Z #9 sha256:cce880541c96dc730321857781d113e3c75c0cb383f9510300922762006d734e 448B / 448B 0.1s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.5088939Z #9 sha256:0c4023204e5b4bcd551170279c40ff58285cc8ea87ddf9ff25cb3713e6ecda79 39.85MB / 49.90MB 0.2s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.5089570Z #9 sha256:076cba098ace87d6950e8fa4cc530bfe59834eba28f30061e8526d6f00bf52c8 3.31kB / 3.31kB 0.2s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.6587529Z #9 sha256:0c4023204e5b4bcd551170279c40ff58285cc8ea87ddf9ff25cb3713e6ecda79 49.90MB / 49.90MB 0.3s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.7836060Z #9 sha256:076cba098ace87d6950e8fa4cc530bfe59834eba28f30061e8526d6f00bf52c8 3.31kB / 3.31kB 0.4s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.9383177Z #9 sha256:0c4023204e5b4bcd551170279c40ff58285cc8ea87ddf9ff25cb3713e6ecda79 49.90MB / 49.90MB 0.5s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.9383780Z #9 DONE 0.7s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.9383893Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.9384266Z #8 [stage-1  1/10] FROM docker.io/library/python:3.11-slim-bookworm@sha256:a83ba18aef0f865b1a4a611c2cf460fe446f2795673bbb9fe43be570439e3b39
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.9386675Z #8 sha256:4855ce9685bd81f7592de6c10e3a6b2362e86c0fd9ffe03001e028699b15cc2e 249B / 249B 0.0s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.9387610Z #8 sha256:f299daadc43c5ed23895e21e1c157957073ba706385b1bd6495df95cc9d4d823 3.34MB / 3.34MB 0.1s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.9388551Z #8 sha256:35c9163bf2bae2f9c986f7e1e1ea9ccd9c36cc0e216d96c0c14553fb8d61d9d2 16.03MB / 16.03MB 0.2s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.9389484Z #8 sha256:dd051e1b8c92ff101fa3071ab97ea4924885942f15644e01c3dc095764e863e3 28.25MB / 28.25MB 0.6s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:14.9390333Z #8 extracting sha256:dd051e1b8c92ff101fa3071ab97ea4924885942f15644e01c3dc095764e863e3
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:15.3501053Z #8 extracting sha256:dd051e1b8c92ff101fa3071ab97ea4924885942f15644e01c3dc095764e863e3 0.6s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:15.3502282Z #8 DONE 1.2s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:15.5938882Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:15.5939875Z #8 [stage-1  1/10] FROM docker.io/library/python:3.11-slim-bookworm@sha256:a83ba18aef0f865b1a4a611c2cf460fe446f2795673bbb9fe43be570439e3b39
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:15.5940957Z #8 extracting sha256:f299daadc43c5ed23895e21e1c157957073ba706385b1bd6495df95cc9d4d823 0.1s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:15.5941918Z #8 extracting sha256:35c9163bf2bae2f9c986f7e1e1ea9ccd9c36cc0e216d96c0c14553fb8d61d9d2
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:15.8710115Z #8 extracting sha256:35c9163bf2bae2f9c986f7e1e1ea9ccd9c36cc0e216d96c0c14553fb8d61d9d2 0.4s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:15.8710772Z #8 DONE 1.8s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:15.8710872Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:15.8711208Z #9 [cli 1/2] FROM docker.io/library/node:22-bookworm-slim@sha256:e9f565d32859f0cbfb52125eafe8be39390f24dac302dc3cdf566e8ba3ab21ee
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:15.8712072Z #9 extracting sha256:076cba098ace87d6950e8fa4cc530bfe59834eba28f30061e8526d6f00bf52c8 done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:15.8712746Z #9 extracting sha256:0c4023204e5b4bcd551170279c40ff58285cc8ea87ddf9ff25cb3713e6ecda79
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.0284748Z #9 ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.0285005Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.0285632Z #8 [stage-1  1/10] FROM docker.io/library/python:3.11-slim-bookworm@sha256:a83ba18aef0f865b1a4a611c2cf460fe446f2795673bbb9fe43be570439e3b39
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.0286682Z #8 extracting sha256:4855ce9685bd81f7592de6c10e3a6b2362e86c0fd9ffe03001e028699b15cc2e done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.0287251Z #8 DONE 1.8s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.0687190Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.0688559Z #10 [stage-1  2/10] RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates ripgrep procps && rm -rf /var/lib/apt/lists/*
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.0690009Z #10 0.191 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.1958511Z #10 0.208 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.1959665Z #10 0.213 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [34.8 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.1960810Z #10 0.264 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8790 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.1961814Z #10 0.318 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.3425046Z #10 ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.3425316Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.3425831Z #9 [cli 1/2] FROM docker.io/library/node:22-bookworm-slim@sha256:e9f565d32859f0cbfb52125eafe8be39390f24dac302dc3cdf566e8ba3ab21ee
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.3426480Z #9 extracting sha256:0c4023204e5b4bcd551170279c40ff58285cc8ea87ddf9ff25cb3713e6ecda79 1.0s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.3426857Z #9 DONE 1.7s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.3426962Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.3427340Z #10 [stage-1  2/10] RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates ripgrep procps && rm -rf /var/lib/apt/lists/*
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.3427998Z #10 0.371 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [375 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.5336924Z #10 ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.5337204Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.5337794Z #9 [cli 1/2] FROM docker.io/library/node:22-bookworm-slim@sha256:e9f565d32859f0cbfb52125eafe8be39390f24dac302dc3cdf566e8ba3ab21ee
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.6829035Z #9 extracting sha256:aa4e8910862263c3bad50c754fb555bbbb7661c41e35ba703ae082ec6749c175 0.0s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.6830578Z #9 extracting sha256:cce880541c96dc730321857781d113e3c75c0cb383f9510300922762006d734e done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.6831153Z #9 DONE 1.7s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.6831312Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:16.6831518Z #11 [cli 2/2] RUN npm install -g @openai/codex@0.169.0
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.3490086Z #11 4.966 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.3490663Z #11 4.966 added 2 packages in 5s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5012307Z #11 4.968 npm notice
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5012881Z #11 4.968 npm notice New major version of npm available! 10.9.9 -> 12.2.2
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5014098Z #11 4.968 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5014931Z #11 4.968 npm notice To update run: npm install -g npm@12.2.2
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5015866Z #11 4.968 npm notice
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5016257Z #11 ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5016511Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5017208Z #10 [stage-1  2/10] RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates ripgrep procps && rm -rf /var/lib/apt/lists/*
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5018154Z #10 1.034 Fetched 9414 kB in 1s (10.8 MB/s)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5018744Z #10 1.034 Reading package lists...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5019146Z #10 1.485 Reading package lists...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5019452Z #10 1.912 Building dependency tree...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5019741Z #10 2.023 Reading state information...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5020152Z #10 2.118 ca-certificates is already the newest version (20250419~deb12u2).
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5020725Z #10 2.118 The following additional packages will be installed:
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5021435Z #10 2.118   git-man libbrotli1 libcurl3-gnutls liberror-perl libexpat1 libgdbm-compat4
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5022751Z #10 2.118   libldap-2.5-0 libnghttp2-14 libperl5.36 libproc2-0 libpsl5 librtmp1
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5023430Z #10 2.119   libsasl2-2 libsasl2-modules-db libssh2-1 perl perl-modules-5.36
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5023914Z #10 2.119 Suggested packages:
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5024400Z #10 2.119   gettext-base git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5025085Z #10 2.119   gitk gitweb git-cvs git-mediawiki git-svn sensible-utils perl-doc
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5025692Z #10 2.119   libterm-readline-gnu-perl | libterm-readline-perl-perl make
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5026207Z #10 2.119   libtap-harness-archive-perl
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5026590Z #10 2.119 Recommended packages:
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5027084Z #10 2.119   patch less ssh-client libldap-common publicsuffix libsasl2-modules psmisc
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5027675Z #10 2.207 The following NEW packages will be installed:
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5028185Z #10 2.207   git git-man libbrotli1 libcurl3-gnutls liberror-perl libexpat1
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5028811Z #10 2.208   libgdbm-compat4 libldap-2.5-0 libnghttp2-14 libperl5.36 libproc2-0 libpsl5
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5029491Z #10 2.208   librtmp1 libsasl2-2 libsasl2-modules-db libssh2-1 perl perl-modules-5.36
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5030003Z #10 2.208   procps ripgrep
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5030394Z #10 2.257 0 upgraded, 20 newly installed, 0 to remove and 0 not upgraded.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5030857Z #10 2.257 Need to get 20.1 MB of archives.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5031322Z #10 2.257 After this operation, 108 MB of additional disk space will be used.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5032313Z #10 2.257 Get:1 http://deb.debian.org/debian-security bookworm-security/main amd64 perl-modules-5.36 all 5.36.0-7+deb12u4 [2817 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5033367Z #10 2.297 Get:2 http://deb.debian.org/debian bookworm/main amd64 libgdbm-compat4 amd64 1.23-3 [48.2 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5034331Z #10 2.299 Get:3 http://deb.debian.org/debian-security bookworm-security/main amd64 libperl5.36 amd64 5.36.0-7+deb12u4 [4208 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5035328Z #10 2.315 Get:4 http://deb.debian.org/debian-security bookworm-security/main amd64 perl amd64 5.36.0-7+deb12u4 [239 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5036146Z #10 2.315 Get:5 http://deb.debian.org/debian bookworm/main amd64 libproc2-0 amd64 2:4.0.2-3 [62.8 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5036919Z #10 2.316 Get:6 http://deb.debian.org/debian bookworm/main amd64 procps amd64 2:4.0.2-3 [709 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5038009Z #10 2.319 Get:7 http://deb.debian.org/debian-security bookworm-security/main amd64 libbrotli1 amd64 1.0.9-2+deb12u1 [275 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5039076Z #10 2.320 Get:8 http://deb.debian.org/debian-security bookworm-security/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg-10+deb12u1 [20.5 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5040148Z #10 2.321 Get:9 http://deb.debian.org/debian-security bookworm-security/main amd64 libsasl2-2 amd64 2.1.28+dfsg-10+deb12u1 [59.9 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5041064Z #10 2.321 Get:10 http://deb.debian.org/debian bookworm/main amd64 libldap-2.5-0 amd64 2.5.13+dfsg-5 [183 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5042018Z #10 2.323 Get:11 http://deb.debian.org/debian bookworm/main amd64 libnghttp2-14 amd64 1.52.0-1+deb12u3 [72.4 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5042836Z #10 2.323 Get:12 http://deb.debian.org/debian bookworm/main amd64 libpsl5 amd64 0.21.2-1 [58.7 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5043350Z #10 2.324 Get:13 http://deb.debian.org/debian bookworm/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b2 [60.8 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5044350Z #10 2.327 Get:14 http://deb.debian.org/debian-security bookworm-security/main amd64 libssh2-1 amd64 1.10.0-3+deb12u1 [176 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5045091Z #10 2.328 Get:15 http://deb.debian.org/debian bookworm/main amd64 libcurl3-gnutls amd64 7.88.1-10+deb12u15 [386 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5045884Z #10 2.331 Get:16 http://deb.debian.org/debian-security bookworm-security/main amd64 libexpat1 amd64 2.5.0-1+deb12u5 [108 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5046766Z #10 2.332 Get:17 http://deb.debian.org/debian bookworm/main amd64 liberror-perl all 0.17029-2 [29.0 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5047558Z #10 2.332 Get:18 http://deb.debian.org/debian bookworm/main amd64 git-man all 1:2.39.5-0+deb12u3 [2053 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5048359Z #10 2.346 Get:19 http://deb.debian.org/debian bookworm/main amd64 git amd64 1:2.39.5-0+deb12u3 [7264 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5049117Z #10 2.380 Get:20 http://deb.debian.org/debian bookworm/main amd64 ripgrep amd64 13.0.0-4+b2 [1253 kB]
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5049657Z #10 2.482 debconf: delaying package configuration, since apt-utils is not installed
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5050004Z #10 2.512 Fetched 20.1 MB in 0s (117 MB/s)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5050299Z #10 2.526 Selecting previously unselected package perl-modules-5.36.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5050593Z #10 2.526 (Reading database ... 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5050866Z (Reading database ... 5%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5051127Z (Reading database ... 10%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5051372Z (Reading database ... 15%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5051766Z (Reading database ... 20%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5052014Z (Reading database ... 25%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5052288Z (Reading database ... 30%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5052588Z (Reading database ... 35%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5052770Z (Reading database ... 40%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5052949Z (Reading database ... 45%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5053165Z (Reading database ... 50%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5053436Z (Reading database ... 55%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5053620Z (Reading database ... 60%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5053822Z (Reading database ... 65%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5054002Z (Reading database ... 70%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5054181Z (Reading database ... 75%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5054359Z (Reading database ... 80%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5054549Z (Reading database ... 85%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5054726Z (Reading database ... 90%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5054904Z (Reading database ... 95%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5055097Z (Reading database ... 100%
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5055378Z (Reading database ... 6701 files and directories currently installed.)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5055769Z #10 2.533 Preparing to unpack .../00-perl-modules-5.36_5.36.0-7+deb12u4_all.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5056131Z #10 2.534 Unpacking perl-modules-5.36 (5.36.0-7+deb12u4) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5056469Z #10 2.828 Selecting previously unselected package libgdbm-compat4:amd64.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5057168Z #10 2.831 Preparing to unpack .../01-libgdbm-compat4_1.23-3_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5057628Z #10 2.832 Unpacking libgdbm-compat4:amd64 (1.23-3) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5058334Z #10 2.849 Selecting previously unselected package libperl5.36:amd64.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5059054Z #10 2.852 Preparing to unpack .../02-libperl5.36_5.36.0-7+deb12u4_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5059754Z #10 2.853 Unpacking libperl5.36:amd64 (5.36.0-7+deb12u4) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5060205Z #10 3.145 Selecting previously unselected package perl.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5060687Z #10 3.147 Preparing to unpack .../03-perl_5.36.0-7+deb12u4_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5061259Z #10 3.168 Unpacking perl (5.36.0-7+deb12u4) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5061786Z #10 3.199 Selecting previously unselected package libproc2-0:amd64.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5062276Z #10 3.201 Preparing to unpack .../04-libproc2-0_2%3a4.0.2-3_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5062858Z #10 3.202 Unpacking libproc2-0:amd64 (2:4.0.2-3) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5063293Z #10 3.222 Selecting previously unselected package procps.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5063806Z #10 3.225 Preparing to unpack .../05-procps_2%3a4.0.2-3_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5064270Z #10 3.240 Unpacking procps (2:4.0.2-3) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5064730Z #10 3.299 Selecting previously unselected package libbrotli1:amd64.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5065271Z #10 3.302 Preparing to unpack .../06-libbrotli1_1.0.9-2+deb12u1_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5065806Z #10 3.303 Unpacking libbrotli1:amd64 (1.0.9-2+deb12u1) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5066342Z #10 3.349 Selecting previously unselected package libsasl2-modules-db:amd64.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5067135Z #10 3.352 Preparing to unpack .../07-libsasl2-modules-db_2.1.28+dfsg-10+deb12u1_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5067785Z #10 3.353 Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg-10+deb12u1) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5068364Z #10 3.368 Selecting previously unselected package libsasl2-2:amd64.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5068933Z #10 3.371 Preparing to unpack .../08-libsasl2-2_2.1.28+dfsg-10+deb12u1_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5069492Z #10 3.372 Unpacking libsasl2-2:amd64 (2.1.28+dfsg-10+deb12u1) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5070024Z #10 3.392 Selecting previously unselected package libldap-2.5-0:amd64.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5070640Z #10 3.394 Preparing to unpack .../09-libldap-2.5-0_2.5.13+dfsg-5_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5071165Z #10 3.395 Unpacking libldap-2.5-0:amd64 (2.5.13+dfsg-5) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5071885Z #10 3.419 Selecting previously unselected package libnghttp2-14:amd64.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5072379Z #10 3.421 Preparing to unpack .../10-libnghttp2-14_1.52.0-1+deb12u3_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5072727Z #10 3.422 Unpacking libnghttp2-14:amd64 (1.52.0-1+deb12u3) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5073044Z #10 3.440 Selecting previously unselected package libpsl5:amd64.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5073366Z #10 3.443 Preparing to unpack .../11-libpsl5_0.21.2-1_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5073658Z #10 3.444 Unpacking libpsl5:amd64 (0.21.2-1) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5073952Z #10 3.461 Selecting previously unselected package librtmp1:amd64.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5074316Z #10 3.463 Preparing to unpack .../12-librtmp1_2.4+20151223.gitfa8646d.1-2+b2_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5074720Z #10 3.464 Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5075278Z #10 3.485 Selecting previously unselected package libssh2-1:amd64.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5075995Z #10 3.487 Preparing to unpack .../13-libssh2-1_1.10.0-3+deb12u1_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5076637Z #10 3.489 Unpacking libssh2-1:amd64 (1.10.0-3+deb12u1) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5077267Z #10 3.535 Selecting previously unselected package libcurl3-gnutls:amd64.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5077883Z #10 3.537 Preparing to unpack .../14-libcurl3-gnutls_7.88.1-10+deb12u15_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5078449Z #10 3.538 Unpacking libcurl3-gnutls:amd64 (7.88.1-10+deb12u15) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5078976Z #10 3.569 Selecting previously unselected package libexpat1:amd64.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5079514Z #10 3.572 Preparing to unpack .../15-libexpat1_2.5.0-1+deb12u5_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5080019Z #10 3.573 Unpacking libexpat1:amd64 (2.5.0-1+deb12u5) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5080680Z #10 3.593 Selecting previously unselected package liberror-perl.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5081214Z #10 3.595 Preparing to unpack .../16-liberror-perl_0.17029-2_all.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5081960Z #10 3.596 Unpacking liberror-perl (0.17029-2) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5082399Z #10 3.611 Selecting previously unselected package git-man.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5082935Z #10 3.614 Preparing to unpack .../17-git-man_1%3a2.39.5-0+deb12u3_all.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5083443Z #10 3.615 Unpacking git-man (1:2.39.5-0+deb12u3) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5083878Z #10 3.721 Selecting previously unselected package git.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5084381Z #10 3.724 Preparing to unpack .../18-git_1%3a2.39.5-0+deb12u3_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5085039Z #10 3.729 Unpacking git (1:2.39.5-0+deb12u3) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5085456Z #10 4.029 Selecting previously unselected package ripgrep.
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5085956Z #10 4.032 Preparing to unpack .../19-ripgrep_13.0.0-4+b2_amd64.deb ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5086430Z #10 4.033 Unpacking ripgrep (13.0.0-4+b2) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5086832Z #10 4.141 Setting up libexpat1:amd64 (2.5.0-1+deb12u5) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5087247Z #10 4.144 Setting up libpsl5:amd64 (0.21.2-1) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5087594Z #10 4.146 Setting up libbrotli1:amd64 (1.0.9-2+deb12u1) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5088046Z #10 4.149 Setting up libnghttp2-14:amd64 (1.52.0-1+deb12u3) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5088602Z #10 4.185 Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg-10+deb12u1) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5089138Z #10 4.187 Setting up perl-modules-5.36 (5.36.0-7+deb12u4) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5089647Z #10 4.189 Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5090012Z #10 4.191 Setting up libproc2-0:amd64 (2:4.0.2-3) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5090283Z #10 4.193 Setting up libgdbm-compat4:amd64 (1.23-3) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5090577Z #10 4.195 Setting up libsasl2-2:amd64 (2.1.28+dfsg-10+deb12u1) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5090870Z #10 4.197 Setting up ripgrep (13.0.0-4+b2) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5091243Z #10 4.200 Setting up procps (2:4.0.2-3) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5091711Z #10 4.223 Setting up git-man (1:2.39.5-0+deb12u3) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5092124Z #10 4.225 Setting up libssh2-1:amd64 (1.10.0-3+deb12u1) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5092594Z #10 4.246 Setting up libperl5.36:amd64 (5.36.0-7+deb12u4) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5093032Z #10 4.248 Setting up libldap-2.5-0:amd64 (2.5.13+dfsg-5) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5093402Z #10 4.296 Setting up perl (5.36.0-7+deb12u4) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5093691Z #10 4.307 Setting up libcurl3-gnutls:amd64 (7.88.1-10+deb12u15) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5093981Z #10 4.310 Setting up liberror-perl (0.17029-2) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5094235Z #10 4.312 Setting up git (1:2.39.5-0+deb12u3) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:21.5094536Z #10 4.319 Processing triggers for libc-bin (2.36-9+deb12u14) ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:26.2690776Z #10 ...
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:26.2690980Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:26.2691154Z #11 [cli 2/2] RUN npm install -g @openai/codex@0.169.0
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:26.2691528Z #11 DONE 9.9s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:26.4199085Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:26.4199904Z #10 [stage-1  2/10] RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates ripgrep procps && rm -rf /var/lib/apt/lists/*
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:26.4200454Z #10 DONE 10.4s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:26.7616630Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:26.7617504Z #12 [stage-1  3/10] COPY --from=cli /usr/local/bin/node /usr/local/bin/node
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:27.4529362Z #12 DONE 0.7s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:27.6038924Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:27.6039581Z #13 [stage-1  4/10] COPY --from=cli /usr/local/lib/node_modules /usr/local/lib/node_modules
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:30.0606551Z #13 DONE 2.6s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:30.1984286Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:30.1985866Z #14 [stage-1  5/10] RUN ln -s /usr/local/lib/node_modules/@openai/codex/bin/codex.js /usr/local/bin/codex
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:30.1986831Z #14 DONE 0.1s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:30.3878144Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:30.3878719Z #15 [stage-1  6/10] WORKDIR /app
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:30.3879093Z #15 DONE 0.0s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:30.3879600Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:30.3879747Z #16 [stage-1  7/10] COPY requirements.txt .
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:30.3880104Z #16 DONE 0.0s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:30.3880250Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:30.3880774Z #17 [stage-1  8/10] RUN pip install --no-cache-dir -r requirements.txt && useradd -m -u 10001 agent && mkdir /data && chown agent:agent /data
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:31.6689387Z #17 1.432 Collecting fastapi==0.115.12 (from -r requirements.txt (line 1))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:31.7804506Z #17 1.473   Downloading fastapi-0.115.12-py3-none-any.whl.metadata (27 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:31.7805145Z #17 1.543 Collecting uvicorn==0.34.2 (from -r requirements.txt (line 2))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:31.8956182Z #17 1.550   Downloading uvicorn-0.34.2-py3-none-any.whl.metadata (6.5 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:31.8957133Z #17 1.598 Collecting python-multipart==0.0.20 (from -r requirements.txt (line 3))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:31.8957601Z #17 1.604   Downloading python_multipart-0.0.20-py3-none-any.whl.metadata (1.8 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.0369762Z #17 1.658 Collecting httpx==0.28.1 (from -r requirements.txt (line 4))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.0370312Z #17 1.665   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.0370795Z #17 1.714 Collecting python-dotenv==1.1.0 (from -r requirements.txt (line 5))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.0371299Z #17 1.721   Downloading python_dotenv-1.1.0-py3-none-any.whl.metadata (24 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.0371986Z #17 1.800 Collecting starlette<0.47.0,>=0.40.0 (from fastapi==0.115.12->-r requirements.txt (line 1))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.1942400Z #17 1.806   Downloading starlette-0.46.2-py3-none-any.whl.metadata (6.2 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.2421934Z #17 2.005 Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi==0.115.12->-r requirements.txt (line 1))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.3750101Z #17 2.012   Downloading pydantic-2.14.3-py3-none-any.whl.metadata (141 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.3751057Z #17 2.020      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 141.5/141.5 kB 21.7 MB/s eta 0:00:00
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.3751542Z #17 2.073 Collecting typing-extensions>=4.8.0 (from fastapi==0.115.12->-r requirements.txt (line 1))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.3752246Z #17 2.080   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.3752669Z #17 2.136 Collecting click>=7.0 (from uvicorn==0.34.2->-r requirements.txt (line 2))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.5059365Z #17 2.142   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.5060291Z #17 2.186 Collecting h11>=0.8 (from uvicorn==0.34.2->-r requirements.txt (line 2))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.5061073Z #17 2.192   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.5062024Z #17 2.269 Collecting anyio (from httpx==0.28.1->-r requirements.txt (line 4))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.6219177Z #17 2.275   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.6219812Z #17 2.327 Collecting certifi (from httpx==0.28.1->-r requirements.txt (line 4))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.6220225Z #17 2.334   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.6220746Z #17 2.385 Collecting httpcore==1.* (from httpx==0.28.1->-r requirements.txt (line 4))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.7372356Z #17 2.391   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.7373098Z #17 2.439 Collecting idna (from httpx==0.28.1->-r requirements.txt (line 4))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.7373676Z #17 2.445   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.7374507Z #17 2.500 Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.12->-r requirements.txt (line 1))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:32.8940912Z #17 2.506   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.4722532Z #17 3.235 Collecting pydantic-core==2.50.4 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.12->-r requirements.txt (line 1))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.5786184Z #17 3.242   Downloading pydantic_core-2.50.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.5787957Z #17 3.289 Collecting typing-inspection>=0.4.4 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.12->-r requirements.txt (line 1))
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.5789008Z #17 3.296   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.5789786Z #17 3.333 Downloading fastapi-0.115.12-py3-none-any.whl (95 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.5790771Z #17 3.335    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.2/95.2 kB 421.2 MB/s eta 0:00:00
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.5791345Z #17 3.341 Downloading uvicorn-0.34.2-py3-none-any.whl (62 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6804685Z #17 3.343    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.5/62.5 kB 285.7 MB/s eta 0:00:00
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6805491Z #17 3.350 Downloading python_multipart-0.0.20-py3-none-any.whl (24 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6806179Z #17 3.357 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6806893Z #17 3.358    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.5/73.5 kB 408.1 MB/s eta 0:00:00
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6807314Z #17 3.365 Downloading python_dotenv-1.1.0-py3-none-any.whl (20 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6807647Z #17 3.371 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6808038Z #17 3.373    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.8/78.8 kB 364.3 MB/s eta 0:00:00
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6808365Z #17 3.380 Downloading click-8.5.1-py3-none-any.whl (126 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6808750Z #17 3.382    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.2/126.2 kB 442.5 MB/s eta 0:00:00
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6809069Z #17 3.388 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6809387Z #17 3.395 Downloading pydantic-2.14.3-py3-none-any.whl (494 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6809794Z #17 3.402    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 494.1/494.1 kB 86.9 MB/s eta 0:00:00
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6810254Z #17 3.409 Downloading pydantic_core-2.50.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6810771Z #17 3.420    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 239.5 MB/s eta 0:00:00
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6811115Z #17 3.426 Downloading starlette-0.46.2-py3-none-any.whl (72 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6811500Z #17 3.428    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.0/72.0 kB 392.8 MB/s eta 0:00:00
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6812035Z #17 3.435 Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6812449Z #17 3.436    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.5/134.5 kB 411.3 MB/s eta 0:00:00
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.6812855Z #17 3.443 Downloading idna-3.20-py3-none-any.whl (69 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.7898551Z #17 3.445    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 386.3 MB/s eta 0:00:00
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.7899451Z #17 3.452 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.7900284Z #17 3.453    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 367.4 MB/s eta 0:00:00
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.7900838Z #17 3.460 Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.7901311Z #17 3.461    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.1/135.1 kB 462.4 MB/s eta 0:00:00
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.7901864Z #17 3.468 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.7902235Z #17 3.475 Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:33.7903034Z #17 3.552 Installing collected packages: typing-extensions, python-multipart, python-dotenv, idna, h11, click, certifi, annotated-types, uvicorn, typing-inspection, pydantic-core, httpcore, anyio, starlette, pydantic, httpx, fastapi
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:34.5222864Z #17 4.285 Successfully installed annotated-types-0.8.0 anyio-4.16.0 certifi-2026.10.23 click-8.5.1 fastapi-0.115.12 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 pydantic-2.14.3 pydantic-core-2.50.4 python-dotenv-1.1.0 python-multipart-0.0.20 starlette-0.46.2 typing-extensions-4.16.0 typing-inspection-0.4.5 uvicorn-0.34.2
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:34.6275027Z #17 4.285 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:34.6276311Z #17 4.390 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:34.6276566Z #17 4.390 [notice] A new release of pip is available: 24.0 -> 26.3
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:34.6276931Z #17 4.390 [notice] To update, run: pip install --upgrade pip
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:35.0836368Z #17 DONE 4.8s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:35.2862122Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:35.2863537Z #18 [stage-1  9/10] COPY app.py ./
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:35.2863974Z #18 DONE 0.0s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:35.2864142Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:35.2864286Z #19 [stage-1 10/10] COPY static ./static
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:35.2864680Z #19 DONE 0.0s
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:35.2864826Z 
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:35.2864937Z #20 exporting to image
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:35.2865227Z #20 exporting layers
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:51.0381179Z #20 exporting layers 15.9s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:51.2080735Z #20 exporting manifest sha256:4273a7bbfaf962fb02e97405a4c08b8915832d40340a6d334cba1e318b92cfcb done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:51.2081436Z #20 exporting config sha256:8633418da119fa4e425445c9c91fdf847c732a22667d7c3acc8f514f376c035a done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:51.2082719Z #20 exporting attestation manifest sha256:e2bfca66be7d21d7ba91885de63c995f89da4b38b0f033b569e28c6aeeec556b done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:51.2083495Z #20 exporting manifest list sha256:1a221d482633b50377b7c189c217a13038a02e04ab4cc4159e6d1b0c2b7b9fe1 done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:51.2083963Z #20 naming to docker.io/library/cloud-agent-workbench:latest done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:51.2084340Z #20 unpacking to docker.io/library/cloud-agent-workbench:latest
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:54.1433389Z #20 unpacking to docker.io/library/cloud-agent-workbench:latest 3.1s done
+live-demo	Run docker build -t cloud-agent-workbench .	2026-11-17T06:44:54.2072978Z #20 DONE 19.0s
+live-demo	Start app with controlled server credentials	﻿2026-11-17T06:44:54.2177542Z ##[group]Run docker run -d --name workbench -p 127.0.0.1:8000:8000 -e AGENT_API_KEY -e AGENT_BASE_URL -e AGENT_MODEL -e MAX_CONCURRENT_RUNS=1 cloud-agent-workbench
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:54.2178408Z ^[[36;1mdocker run -d --name workbench -p 127.0.0.1:8000:8000 -e AGENT_API_KEY -e AGENT_BASE_URL -e AGENT_MODEL -e MAX_CONCURRENT_RUNS=1 cloud-agent-workbench^[[0m
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:54.2179068Z ^[[36;1mfor i in $(seq 1 30); do curl -fsS http://127.0.0.1:8000/api/health && break || sleep 2; done^[[0m
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:54.2179454Z ^[[36;1mdocker exec workbench codex --version^[[0m
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:54.2223602Z shell: /usr/bin/bash -e {0}
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:54.2223829Z env:
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:54.2224064Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:54.2224445Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:54.2224794Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:54.2225124Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:54.2225461Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:54.2225779Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:54.2226401Z   AGENT_API_KEY: ***
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:54.2226687Z   AGENT_BASE_URL: ***
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:54.2226886Z   AGENT_MODEL: ***
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:54.2227066Z ##[endgroup]
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:57.9231885Z ac276cdced8442a16ec94e5e7da393c7f995ab00b490b352bf5ffacc4e23f25d
+live-demo	Start app with controlled server credentials	2026-11-17T06:44:58.1046105Z curl: (56) Recv failure: Connection reset by peer
+live-demo	Start app with controlled server credentials	2026-11-17T06:45:00.2007266Z {"ok":true,"configured":true,"cli":true,"model":"***"}codex-cli 0.169.0
+live-demo	Two concurrent tasks and follow-up turns	﻿2026-11-17T06:45:00.2081552Z ##[group]Run python demo/run_demo.py
+live-demo	Two concurrent tasks and follow-up turns	2026-11-17T06:45:00.2082114Z ^[[36;1mpython demo/run_demo.py^[[0m
+live-demo	Two concurrent tasks and follow-up turns	2026-11-17T06:45:00.2126825Z shell: /usr/bin/bash -e {0}
+live-demo	Two concurrent tasks and follow-up turns	2026-11-17T06:45:00.2127050Z env:
+live-demo	Two concurrent tasks and follow-up turns	2026-11-17T06:45:00.2127494Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Two concurrent tasks and follow-up turns	2026-11-17T06:45:00.2127867Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+live-demo	Two concurrent tasks and follow-up turns	2026-11-17T06:45:00.2128211Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Two concurrent tasks and follow-up turns	2026-11-17T06:45:00.2128517Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Two concurrent tasks and follow-up turns	2026-11-17T06:45:00.2128840Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Two concurrent tasks and follow-up turns	2026-11-17T06:45:00.2129148Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+live-demo	Two concurrent tasks and follow-up turns	2026-11-17T06:45:00.2129409Z ##[endgroup]
+live-demo	Two concurrent tasks and follow-up turns	2026-11-17T06:45:00.3507757Z Concurrent sessions: 6fae3624-6b9e-4763-baed-ed622b9a3893 8f38317c-da6a-4042-bf16-9c874f55e953
+live-demo	Two concurrent tasks and follow-up turns	2026-11-17T06:51:51.8787775Z Code first turn passed
+live-demo	Two concurrent tasks and follow-up turns	2026-11-17T06:52:36.9396116Z Report first turn passed
+live-demo	Two concurrent tasks and follow-up turns	2026-11-17T06:55:07.1565030Z code follow-up passed 4 files
+live-demo	Two concurrent tasks and follow-up turns	2026-11-17T07:00:22.5953833Z report follow-up passed 6 files
+live-demo	Export sanitized event evidence	﻿2026-11-17T07:00:22.6147794Z ##[group]Run docker exec workbench python -c "import sqlite3,json; d=sqlite3.connect('/data/workbench.sqlite3'); d.row_factory=sqlite3.Row; print(json.dumps([dict(x) for x in d.execute('SELECT * FROM events ORDER BY id')],ensure_ascii=False,indent=2))" > evidence/live-demo/events.json
+live-demo	Export sanitized event evidence	2026-11-17T07:00:22.6149205Z ^[[36;1mdocker exec workbench python -c "import sqlite3,json; d=sqlite3.connect('/data/workbench.sqlite3'); d.row_factory=sqlite3.Row; print(json.dumps([dict(x) for x in d.execute('SELECT * FROM events ORDER BY id')],ensure_ascii=False,indent=2))" > evidence/live-demo/events.json^[[0m
+live-demo	Export sanitized event evidence	2026-11-17T07:00:22.6150034Z ^[[36;1mdocker logs workbench > evidence/live-demo/container.log 2>&1^[[0m
+live-demo	Export sanitized event evidence	2026-11-17T07:00:22.6193567Z shell: /usr/bin/bash -e {0}
+live-demo	Export sanitized event evidence	2026-11-17T07:00:22.6193793Z env:
+live-demo	Export sanitized event evidence	2026-11-17T07:00:22.6194027Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Export sanitized event evidence	2026-11-17T07:00:22.6194398Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+live-demo	Export sanitized event evidence	2026-11-17T07:00:22.6194742Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Export sanitized event evidence	2026-11-17T07:00:22.6195081Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Export sanitized event evidence	2026-11-17T07:00:22.6195387Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Export sanitized event evidence	2026-11-17T07:00:22.6195694Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+live-demo	Export sanitized event evidence	2026-11-17T07:00:22.6195957Z ##[endgroup]
+live-demo	Run actions/upload-artifact@v4	﻿2026-11-17T07:00:22.7181222Z ##[group]Run actions/upload-artifact@v4
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.7181480Z with:
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.7181893Z   name: real-agent-evidence
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.7182102Z   path: evidence/live-demo/
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.7182298Z   if-no-files-found: warn
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.7182504Z   compression-level: 6
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.7182686Z   overwrite: false
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.7182878Z   include-hidden-files: false
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.7183077Z env:
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.7183296Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.7183642Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.7183977Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.7184298Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.7184601Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.7184900Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.7185168Z ##[endgroup]
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.8497061Z (node:4725) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.8498135Z (Use `node --trace-deprecation ...` to show where the warning was created)
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.8565381Z With the provided path, there will be 7 files uploaded
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.8569902Z Artifact name is valid!
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:22.8570279Z Root directory input is valid!
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:23.0956441Z Beginning upload of artifact content to blob storage
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:23.1322716Z (node:4725) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:23.1625936Z Uploaded bytes 78458
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:23.1749216Z Finished uploading artifact content to blob storage!
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:23.1749983Z SHA256 digest of uploaded artifact zip is ff75b05a94d5d1ae1b856772ee18e4e4c786c18be4908e8089d67ce7fe3684e8
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:23.1751390Z Finalizing artifact upload
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:23.4990220Z Artifact real-agent-evidence.zip successfully finalized. Artifact ID 14306344183
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:23.4990836Z Artifact real-agent-evidence has been successfully uploaded! Final size is 78458 bytes. Artifact ID is 14306344183
+live-demo	Run actions/upload-artifact@v4	2026-11-17T07:00:23.4996263Z Artifact download URL: https://github.com/ZYJda/cloud-agent-workbench/actions/runs/44033399517/artifacts/14306344183
+live-demo	Post Run actions/setup-python@v5	﻿2026-11-17T07:00:23.5166231Z Post job cleanup.
+live-demo	Post Run actions/setup-python@v5	2026-11-17T07:00:23.6141869Z (node:4738) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+live-demo	Post Run actions/setup-python@v5	2026-11-17T07:00:23.6142824Z (Use `node --trace-deprecation ...` to show where the warning was created)
+live-demo	Post Run actions/checkout@v4	﻿2026-11-17T07:00:23.6300946Z Post job cleanup.
+live-demo	Post Run actions/checkout@v4	2026-11-17T07:00:23.7038377Z [command]/usr/bin/git version
+live-demo	Post Run actions/checkout@v4	2026-11-17T07:00:23.7075679Z git version 2.56.1
+live-demo	Post Run actions/checkout@v4	2026-11-17T07:00:23.7105336Z Temporarily overriding HOME='/home/runner/work/_temp/323f9dd9-da28-4695-9398-5dafa07f9e15' before making global git config changes
+live-demo	Post Run actions/checkout@v4	2026-11-17T07:00:23.7106388Z Adding repository directory to the temporary git global config as a safe directory
+live-demo	Post Run actions/checkout@v4	2026-11-17T07:00:23.7109285Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cloud-agent-workbench/cloud-agent-workbench
+live-demo	Post Run actions/checkout@v4	2026-11-17T07:00:23.7153701Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+live-demo	Post Run actions/checkout@v4	2026-11-17T07:00:23.7203811Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+live-demo	Post Run actions/checkout@v4	2026-11-17T07:00:23.7505739Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+live-demo	Post Run actions/checkout@v4	2026-11-17T07:00:23.7531441Z http.https://github.com/.extraheader
+live-demo	Post Run actions/checkout@v4	2026-11-17T07:00:23.7549394Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+live-demo	Post Run actions/checkout@v4	2026-11-17T07:00:23.7577295Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+live-demo	Post Run actions/checkout@v4	2026-11-17T07:00:23.7935330Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+live-demo	Post Run actions/checkout@v4	2026-11-17T07:00:23.7967079Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+live-demo	Complete job	﻿2026-11-17T07:00:23.8347794Z Cleaning up orphan processes
+live-demo	Complete job	2026-11-17T07:00:23.8679020Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

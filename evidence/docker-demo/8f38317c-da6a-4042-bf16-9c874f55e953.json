@@ -1,0 +1,54 @@
+{
+  "session": {
+    "id": "8f38317c-da6a-4042-bf16-9c874f55e953",
+    "title": "销售月度复盘 · 完整演示",
+    "created": 1794897900.3120618,
+    "thread_id": "01a1e846-b5b0-7803-80de-90a6c067edb7"
+  },
+  "runs": [
+    {
+      "id": "484d3b5a-ba59-4d06-92d4-a96b75ee2a09",
+      "session_id": "8f38317c-da6a-4042-bf16-9c874f55e953",
+      "prompt": "读取 uploads/ 中的销售材料，核对两个月收入、成本、毛利以及环比变化，写出事实、推测和数据局限，保存 artifacts/report.md。使用 Python 实际计算核对。",
+      "status": "succeeded",
+      "created": 1794897900.347655,
+      "finished": 1794898354.9744833,
+      "error": null
+    },
+    {
+      "id": "59edbd83-3621-4d74-aa8a-65834afe5491",
+      "session_id": "8f38317c-da6a-4042-bf16-9c874f55e953",
+      "prompt": "保留报告原文，追加不超过 150 字的管理层摘要和三项下周行动，不要编造缺失信息。",
+      "status": "succeeded",
+      "created": 1794898356.9471445,
+      "finished": 1794898820.2546976,
+      "error": null
+    }
+  ],
+  "files": [
+    {
+      "path": "artifacts/final_check.py",
+      "size": 5278
+    },
+    {
+      "path": "artifacts/report.md",
+      "size": 9417
+    },
+    {
+      "path": "artifacts/verify.py",
+      "size": 8894
+    },
+    {
+      "path": "artifacts/verify_output.txt",
+      "size": 3971
+    },
+    {
+      "path": "uploads/25bd6aa2-brief.txt",
+      "size": 439
+    },
+    {
+      "path": "uploads/579c3a4c-sales.csv",
+      "size": 254
+    }
+  ]
+}

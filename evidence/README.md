@@ -23,6 +23,14 @@
 - 本机 Docker Desktop 已安装，但 Windows 未启用 Virtual Machine Platform，无法启动 Linux engine；没有将本机原生 Python 运行冒充为 Docker 运行。容器验证在公开 GitHub Actions 中执行。
 - 首轮容器真实模型演示遇到 429 限流，失败记录保留在 Actions。后续调整为 `MAX_CONCURRENT_RUNS=1`，避免与本机运行同时占用 API 并发。
 
+## Docker 内真实模型演示：已通过
+
+[完整 Actions 运行（44033399517）](https://github.com/ZYJda/cloud-agent-workbench/actions/runs/44033399517) 于 2026-11-17 15:00 左右完成，job 总耗时 16 分 19 秒，结论 success。
+
+该运行在 Linux Docker 容器中使用 Codex CLI 0.169.0 和加密服务端凭据，创建两个工作会话并通过队列依次执行，完成代码开发、文件上传分析以及各自的一次后续修改，四轮均 succeeded。并发限制设为 1，不将队列执行表述为两个 Agent 同时运行。
+
+`docker-demo/` 保存该运行下载的原始验证产物：会话 JSON、CLI 事件、容器日志、工作流日志及两个成果 ZIP。已核对代码 ZIP 包含 summary.py、test_summary.py、README.md、sample.csv；报告 ZIP 包含 report.md、核验脚本与上传材料。源码 ZIP 与密钥扫描均不包含 .env 或运行数据卷。
+
 ## 重现
 
 1. 按 README 配置并启动 Docker。
