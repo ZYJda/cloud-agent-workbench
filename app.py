@@ -158,6 +158,7 @@ def execute(sid, rid):
         proc.stdin.write(prompt.encode('utf-8'))
         proc.stdin.close()
         failed = False
+        completed = False
         last_error = ''
         for raw in iter(proc.stdout.readline, b''):
             line = raw.decode('utf-8', errors='replace').strip()
@@ -170,6 +171,8 @@ def execute(sid, rid):
                 continue
             if item.get('type') == 'thread.started':
                 query('UPDATE sessions SET thread_id=? WHERE id=?', (item['thread_id'],sid))
+            if item.get('type') == 'turn.completed':
+                completed = True
             if item.get('type') == 'turn.failed':
                 failed = True
                 last_error = str(item.get('error',{}).get('message',''))
@@ -179,7 +182,7 @@ def execute(sid, rid):
         rc = proc.wait()
         if timed_out.is_set():
             raise RuntimeError('任务超时已停止；已有成果已保留，可缩小任务后继续。')
-        if rc != 0 or failed:
+        if rc != 0 or failed or not completed:
             explanation = '请求过于频繁，请等待其他任务完成后重试。' if '429' in last_error else '请查看执行记录，检查模型、额度或网络后重试。'
             raise RuntimeError(f'Agent 执行失败（退出码 {rc}）。{explanation} {last_error[:1000]}')
         with lock:

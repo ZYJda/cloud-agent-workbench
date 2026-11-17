@@ -4,6 +4,8 @@ import json
 import os
 from pathlib import Path
 import tempfile
+import subprocess
+import sys
 import unittest
 from unittest.mock import patch, MagicMock
 
@@ -89,6 +91,26 @@ class WorkbenchTests(unittest.TestCase):
 
     def test_blank_prompt_rejected(self):
         self.assertEqual(self.client.post(self.base+'/runs',json={'prompt':'  '}).status_code,400)
+
+    def test_restart_preserves_history_and_marks_interrupted(self):
+        self.send()
+        subprocess.run([sys.executable,'-c','import app'],check=True,env=os.environ.copy())
+        run=self.client.get(self.base).json()['runs'][0]
+        self.assertEqual(run['status'],'interrupted')
+        self.assertEqual(run['prompt'],'do work')
+
+    def test_host_rebinding_blocked(self):
+        self.assertEqual(self.client.get('/api/sessions',headers={'host':'evil.example'}).status_code,400)
+
+    def test_cli_exit_zero_without_completed_event_is_failure(self):
+        rid = self.send().json()['id']
+        proc=MagicMock()
+        proc.stdout=io.BytesIO(b'')
+        proc.wait.return_value=0
+        proc.poll.return_value=0
+        with patch.object(app.subprocess,'Popen',return_value=proc):
+            app.execute(self.sid,rid)
+        self.assertEqual(self.client.get(self.base).json()['runs'][0]['status'],'failed')
 
 if __name__ == '__main__':
     unittest.main()
