@@ -1,0 +1,34 @@
+name: Real Agent Docker demo
+on: workflow_dispatch
+jobs:
+  live-demo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: docker build -t cloud-agent-workbench .
+      - name: Start app with controlled server credentials
+        env:
+          AGENT_API_KEY: ${{ secrets.AGENT_API_KEY }}
+          AGENT_BASE_URL: ${{ secrets.AGENT_BASE_URL }}
+          AGENT_MODEL: ${{ secrets.AGENT_MODEL }}
+        run: |
+          docker run -d --name workbench -p 127.0.0.1:8000:8000 -e AGENT_API_KEY -e AGENT_BASE_URL -e AGENT_MODEL cloud-agent-workbench
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:8000/api/health && break || sleep 2; done
+          docker exec workbench codex --version
+      - name: Two concurrent tasks and follow-up turns
+        run: python demo/run_demo.py
+      - name: Export sanitized event evidence
+        if: always()
+        run: |
+          docker exec workbench python -c "import sqlite3,json; d=sqlite3.connect('/data/workbench.sqlite3'); d.row_factory=sqlite3.Row; print(json.dumps([dict(x) for x in d.execute('SELECT * FROM events ORDER BY id')],ensure_ascii=False,indent=2))" > evidence/live-demo/events.json
+          docker logs workbench > evidence/live-demo/container.log 2>&1
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: real-agent-evidence
+          path: evidence/live-demo/
