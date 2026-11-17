@@ -33,7 +33,7 @@ python -m venv .venv
 # Linux/macOS: source .venv/bin/activate
 # Windows: .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-npm install -g @openai/codex@0.98.0
+npm install -g @openai/codex@0.169.0
 uvicorn app:app --host 127.0.0.1 --port 8000
 python -m unittest discover -s tests -v
 ```

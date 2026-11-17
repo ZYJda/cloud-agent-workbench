@@ -1,5 +1,5 @@
 FROM node:22-bookworm-slim AS cli
-ARG CODEX_VERSION=0.98.0
+ARG CODEX_VERSION=0.169.0
 RUN npm install -g @openai/codex@${CODEX_VERSION}
 FROM python:3.11-slim-bookworm
 RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates ripgrep procps && rm -rf /var/lib/apt/lists/*
